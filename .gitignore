@@ -1,0 +1,9 @@
+
+mallet/*
+.idea/*
+venv/*
+*.csv
+*.html
+*.png
+*.pyc
+gensim*
