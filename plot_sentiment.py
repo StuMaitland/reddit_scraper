@@ -8,7 +8,7 @@ import networkx as nx
 mpl.use('macosx')
 duration = 60
 
-df = pd.read_csv('2017-2021.csv')
+df = pd.read_csv('test6.csv')
 df['created_utc'] = pd.to_datetime(df['created_utc'], unit='s')
 df = df.set_index('created_utc')
 

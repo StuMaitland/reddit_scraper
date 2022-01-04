@@ -16,8 +16,8 @@ r = praw.Reddit(
 
 api = PushshiftAPI(r)
 
-start_epoch = int(dt.datetime(2017, 1, 1).timestamp())
-end_epoch = int(dt.datetime(2021, 10, 28).timestamp())
+start_epoch = int(dt.datetime(2021, 10, 29).timestamp())
+end_epoch = int(dt.datetime(2021, 12, 31).timestamp())
 
 gen = api.search_comments(after=start_epoch,
                           before=end_epoch,
@@ -37,6 +37,6 @@ for c in gen:
     df = df.append(df_row, ignore_index=True)
 
 df.columns = ['id', 'body', 'author', 'created_utc', 'score', 'parent_id', 'sentiment']
-df.to_csv('2017-2021.csv', index=False)
+df.to_csv('end_2021.csv', index=False)
 
 print('')
